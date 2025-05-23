@@ -1,0 +1,162 @@
+:root {
+    --navbar-height: 80px;
+    --footer-height: 60px;
+    --accent-color: #e63946;
+    --dark-text: #2d3436;
+    --light-bg: #f8f9fa;
+    --elegant-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+/* Estructura principal */
+.layoutContainer {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.mainContent {
+    
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - var(--navbar-height) - var(--footer-height));
+}
+
+/* Columna de imagen */
+.imageColumn {
+    position: relative;
+    overflow: hidden;
+    background: var(--light-bg);
+}
+
+.profileImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(15%) contrast(110%);
+}
+
+.profileImage:hover {
+    transform: scale(1.02);
+}
+
+/* Columna de texto */
+.textColumn {
+    padding: 4rem 5rem;
+    overflow-y: auto;
+    background: white;
+    box-shadow: var(--elegant-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.textContent {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Tipografía */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    letter-spacing: 0.5px;
+}
+
+.bioText {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.bioText p {
+    margin-bottom: 1.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.bioText p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+    .textColumn {
+        padding: 3rem 4rem;
+    }
+    
+    .title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .imageColumn {
+        height: 60vh;
+    }
+    
+    .textColumn {
+        padding: 3rem 2rem;
+        box-shadow: none;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .textColumn {
+        padding: 2rem 1.5rem;
+    }
+    
+    .bioText p {
+        padding-left: 1rem;
+    }
+    
+    .bioText p::before {
+        width: 6px;
+        height: 6px;
+    }
+}

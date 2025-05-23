@@ -1,0 +1,150 @@
+.section {
+  padding: 2rem 0;
+  background: #f8f9fa;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #2d3436;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.experienceCard {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  height: 100%;
+  background: white;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.universityLogo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.universityInfo {
+  flex: 1;
+}
+
+.university {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #2d3436;
+  margin: 0 0 0.4rem;
+}
+
+.location {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.positions {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.position {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  background: #e63946;
+  border-radius: 50%;
+}
+
+.positionContent {
+  padding-left: 1.5rem;
+}
+
+.period {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: #2d3436;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.course {
+  color: #4a4a4a;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.level {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .universityLogo {
+    margin-bottom: 1rem;
+  }
+  
+  .university {
+    font-size: 1.3rem;
+  }
+  
+  .role {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .universityLogo {
+    width: 80px;
+    height: 80px;
+  }
+}
